@@ -1,0 +1,40 @@
+---
+title: "Báo cáo thực tập"
+date: 2026-07-09
+weight: 1
+chapter: false
+---
+
+# Báo cáo thực tập
+### Thông tin sinh viên:
+&emsp; **Họ và tên:** Huỳnh Nguyễn Trí Nhân
+
+&emsp; **Số điện thoại:** 0905606269 
+
+&emsp; **Email:** huynhnhandn68@gmail.com
+
+&emsp; **Trường:** HUTECH
+
+&emsp; **Ngành:** Công nghệthông tin
+
+&emsp; **Lớp:** 22DTHA3
+
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
+
+&emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
+
+&emsp; **Thời gian thực tập:** Từ ngày 17/4/2026 đến ngày 10/7/2026
+
+![Ảnh đại diện của bạn](/images/avatar.jpg?v=2)
+
+
+
+### Nội dung báo cáo
+
+1.  [Worklog](1-Worklog/)
+2.  [Proposal](2-Proposal/)
+3.  [Các bài blogs đã đăng](3-BlogsPosted/)
+4.  [Các events đã tham gia](4-EventParticipated/)
+5.  [Workshop](5-Workshop/)
+6.  [Tự đánh giá](6-Self-evaluation/)
+7.  [Chia sẻ, đóng góp ý kiến](7-Feedback/)
