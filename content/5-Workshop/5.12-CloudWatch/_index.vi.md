@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 5.12. </b> "
 ---
 
-Amazon CloudWatch dùng đểgiám sát log và theo dõi luồng xử lý (tracing) của các hàm Lambda trong SmartCV. Mục này hướng dẫn cách chuẩn hóa log và bật tracing cho dự án.
+Amazon CloudWatch dùng để giám sát log và theo dõi luồng xử lý (tracing) của các hàm Lambda trong SmartCV. Mục này hướng dẫn cách chuẩn hóa log và bật tracing cho dự án.
 
 #### Chuẩn hóa Log bằng AWS Lambda Powertools
 
@@ -30,7 +30,7 @@ def lambda_handler(event, context):
 ```
 
 ![Ví dụ log JSON có cấu trúc trên CloudWatch](/images/5-Workshop/5.12-CloudWatch/image9.png)
-**Hình 5.12.1**  ELog JSON có cấu trúc hiển thịtrên CloudWatch Logs Insights.
+**Hình 5.12.1** — Log JSON có cấu trúc hiển thị trên CloudWatch Logs Insights.
 
 #### Cấu hình Log Retention và Tracing trong CDK
 
@@ -45,19 +45,19 @@ const smartcvFunction = new lambda.Function(this, 'SmartCVFunction', {
 ```
 
 - **`logRetention: 30 ngày`**: tự động xóa log cũ hơn 30 ngày, tránh phát sinh chi phí lưu trữ log không cần thiết theo thời gian.
-- **`Tracing.ACTIVE`**: tích hợp **AWS X-Ray**, cho phép theo dõi chi tiết luồng đi của một request qua nhiều dịch vụ (API Gateway ↁELambda ↁEDynamoDB/Bedrock), hữu ích khi cần debug hiệu năng hoặc lỗi.
+- **`Tracing.ACTIVE`**: tích hợp **AWS X-Ray**, cho phép theo dõi chi tiết luồng đi của một request qua nhiều dịch vụ (API Gateway → Lambda → DynamoDB/Bedrock), hữu ích khi cần debug hiệu năng hoặc lỗi.
 
 ![Cấu hình logRetention và Tracing trong CDK](/images/5-Workshop/5.12-CloudWatch/image10.png)
-**Hình 5.12.2**  ECấu hình `logRetention` và `tracing` trong CDK.
+**Hình 5.12.2** — Cấu hình `logRetention` và `tracing` trong CDK.
 
 #### Xem Trace trên AWS X-Ray
 
-1. Truy cập dịch vụ **CloudWatch** ↁE**X-Ray traces** (hoặc mở trực tiếp dịch vụ **X-Ray**).
-2. Chọn một trace cụ thểđể xem chi tiết thời gian xử lý qua từng dịch vụ (Service Map).
+1. Truy cập dịch vụ **CloudWatch** → **X-Ray traces** (hoặc mở trực tiếp dịch vụ **X-Ray**).
+2. Chọn một trace cụ thể để xem chi tiết thời gian xử lý qua từng dịch vụ (Service Map).
 
 ![Service Map trên AWS X-Ray](/images/5-Workshop/5.12-CloudWatch/image11.png)
-**Hình 5.12.3**  EService Map trên AWS X-Ray hiển thịluồng request qua API Gateway, Lambda và các dịch vụ downstream.
+**Hình 5.12.3** — Service Map trên AWS X-Ray hiển thị luồng request qua API Gateway, Lambda và các dịch vụ downstream.
 
 {{% notice note %}}
-Log Group trên CloudWatch được tạo tự động theo tên `/aws/lambda/<tên-function>` và **không tự xóa** khi bạn xóa Lambda function. Khi dọn dẹp tài nguyên ở mục [5.13](../5.13-cleanup/), nhở xóa thêm các Log Group này để tránh phát sinh chi phí lưu trữ log kéo dài.
+Log Group trên CloudWatch được tạo tự động theo tên `/aws/lambda/<tên-function>` và **không tự xóa** khi bạn xóa Lambda function. Khi dọn dẹp tài nguyên ở mục [5.13](../5.13-cleanup/), nhớ xóa thêm các Log Group này để tránh phát sinh chi phí lưu trữ log kéo dài.
 {{% /notice %}}

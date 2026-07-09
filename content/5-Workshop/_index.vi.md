@@ -6,16 +6,16 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-# Hệ thống theo dõi và tối ưu hóa hồ sơ xin việc ứng dụng trí tuệnhân tạo (AI)
+# Hệ thống theo dõi và tối ưu hóa hồ sơ xin việc ứng dụng trí tuệ nhân tạo (AI)
 
 #### Tổng quan dự án
 
-Chào mừng bạn đến với Workshop triển khai **SmartCV**  Ehệ thống theo dõi và tối ưu hóa quá trình ứng tuyển việc làm ứng dụng trí tuệnhân tạo (AI), được xây dựng trên nền tảng **AWS Serverless Architecture**. Dự án hỗ trợ người dùng quản lý các hồ sơ ứng tuyển, theo dõi trạng thái tuyển dụng, lưu trữ Resume và Cover Letter, đồng thời sử dụng mô hình AI trên **Amazon Bedrock** để phân tích hồ sơ, đưa ra nhận xét và gợi ý cải thiện nhằm nâng cao cơ hội trúng tuyển.
+Chào mừng bạn đến với Workshop triển khai **SmartCV** – hệ thống theo dõi và tối ưu hóa quá trình ứng tuyển việc làm ứng dụng trí tuệ nhân tạo (AI), được xây dựng trên nền tảng **AWS Serverless Architecture**. Dự án hỗ trợ người dùng quản lý các hồ sơ ứng tuyển, theo dõi trạng thái tuyển dụng, lưu trữ Resume và Cover Letter, đồng thời sử dụng mô hình AI trên **Amazon Bedrock** để phân tích hồ sơ, đưa ra nhận xét và gợi ý cải thiện nhằm nâng cao cơ hội trúng tuyển.
 
-Trong thực tế, hệ thống được triển khai bằng Infrastructure as Code (AWS CDK) để tự động hóa việc xây dựng hạ tầng. Tuy nhiên, trong Workshop này, toàn bộcác dịch vụ AWS sẽ được cấu hình theo phương pháp **Click-Ops** thông qua AWS Management Console, giúp người học hiểu rõ vai trò của từng dịch vụ và cách các thành phần trong kiến trúc Serverless kết nối với nhau.
+Trong thực tế, hệ thống được triển khai bằng Infrastructure as Code (AWS CDK) để tự động hóa việc xây dựng hạ tầng. Tuy nhiên, trong Workshop này, toàn bộ các dịch vụ AWS sẽ được cấu hình theo phương pháp **Click-Ops** thông qua AWS Management Console, giúp người học hiểu rõ vai trò của từng dịch vụ và cách các thành phần trong kiến trúc Serverless kết nối với nhau.
 
 {{% notice tip %}}
-**Chọn Region ngay từ đầu:** Toàn bộ Workshop dùng cùng một Region  Ekhuyến nghệ **`ap-southeast-1` (Singapore)**. Trước khi bắt đầu, hãy chọn Region này ở góc phải trên cùng của AWS Console và giữ nguyên xuyên suốt cho mọi dịch vụ (DynamoDB, S3, Cognito, Lambda, API Gateway, EventBridge, Bedrock).
+**Chọn Region ngay từ đầu:** Toàn bộ Workshop dùng cùng một Region — khuyến nghị **`ap-southeast-1` (Singapore)**. Trước khi bắt đầu, hãy chọn Region này ở góc phải trên cùng của AWS Console và giữ nguyên xuyên suốt cho mọi dịch vụ (DynamoDB, S3, Cognito, Lambda, API Gateway, EventBridge, Bedrock).
 
 **Enable Bedrock Model Access trước:** Vì Lambda ở mục 5.5 sẽ gọi Amazon Bedrock, bạn nên hoàn thành bước "Enable Model Access" ở mục **5.10** *trước khi* làm mục 5.5, để tránh lỗi `AccessDeniedException` khi test Lambda.
 {{% /notice %}}
@@ -23,7 +23,7 @@ Trong thực tế, hệ thống được triển khai bằng Infrastructure as C
 Sau khi hoàn thành Workshop, người thực hiện sẽ đạt được:
 * Hiểu được kiến trúc Cloud-Native và Serverless trên nền tảng AWS.
 * Nắm được quy trình triển khai Amazon DynamoDB, Amazon S3, Amazon Cognito, AWS Lambda, Amazon API Gateway, Amazon EventBridge, Amazon SES, Amazon Bedrock và AWS Amplify.
-* Xây dựng thành công hệ thống SmartCV: quản lý hồ sơ ứng tuyển, tải lên Resume, xác thực người dùng, gửi email nhắc nhở theo dõi tiến độứng tuyển và phân tích hồ sơ bằng AI.
+* Xây dựng thành công hệ thống SmartCV: quản lý hồ sơ ứng tuyển, tải lên Resume, xác thực người dùng, gửi email nhắc nhở, theo dõi tiến độ ứng tuyển và phân tích hồ sơ bằng AI.
 * Hiểu cách tích hợp React Frontend với Backend Serverless trên AWS.
 
 #### Nội dung

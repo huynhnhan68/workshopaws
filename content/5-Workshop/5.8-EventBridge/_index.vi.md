@@ -11,7 +11,7 @@ EventBridge dùng để tự động chạy Lambda theo lịch, ví dụ gửi W
 #### Tạo Schedule gửi email Follow-up hằng ngày
 
 1. Truy cập dịch vụ **Amazon EventBridge** trên AWS Console.
-2. Menu bên trái chọn **Scheduler** ↁE**Schedules**.
+2. Menu bên trái chọn **Scheduler** → **Schedules**.
 3. Nhấn **Create schedule**.
 4. **Schedule name:** nhập `smartcv-daily-followup`.
 5. Chọn **Recurring schedule**.
@@ -20,17 +20,17 @@ EventBridge dùng để tự động chạy Lambda theo lịch, ví dụ gửi W
 8. Nhập Cron Expression: `0 9 * * ? *`
 
 {{% notice note %}}
-Vì Time zone đã được chọn là **Asia/Saigon**, các giá trở giở trong cron expression được hiểu theo **giở địa phương Việt Nam**, không phải UTC. `0 9 * * ? *` = **09:00 sáng mỗi ngày theo giở Việt Nam** (không phải 2 giở sáng  Eđây là lỗi thường gặp khi nhầm giữa giở UTC và giở local sau khi đã chọn Time zone).
+Vì Time zone đã được chọn là **Asia/Saigon**, các giá trị giờ trong cron expression được hiểu theo **giờ địa phương Việt Nam**, không phải UTC. `0 9 * * ? *` = **09:00 sáng mỗi ngày theo giờ Việt Nam** (không phải 2 giờ sáng — đây là lỗi thường gặp khi nhầm giữa giờ UTC và giờ local sau khi đã chọn Time zone).
 {{% /notice %}}
 
-![Tạo Schedule Follow-up](/images/5-Workshop/5.8-EventBridge/5.48.png)
+![Tạo Schedule Follow-up](/images/5-Workshop/5.8-EventBridge/5.42.png)
 
 9. Nhấn **Next**.
-10. ở phần **Target API**, chọn **AWS Lambda** ↁE**Invoke**.
+10. Ở phần **Target API**, chọn **AWS Lambda** → **Invoke**.
 11. **Lambda function:** chọn `smartcv-followup`, nhấn **Next**.
-12. Nhấn **Create schedule** đểhoàn tất.
+12. Nhấn **Create schedule** để hoàn tất.
 
-![Hoàn tất Schedule](/images/5-Workshop/5.8-EventBridge/5.49.png)
+![Hoàn tất Schedule](/images/5-Workshop/5.8-EventBridge/5.43.png)
 
 #### Tạo Schedule gửi email tổng kết hàng tuần
 
@@ -39,13 +39,14 @@ Vì Time zone đã được chọn là **Asia/Saigon**, các giá trở giở tr
 3. Chọn **Recurring schedule**.
 4. **Time zone:** chọn **Asia/Saigon (UTC+07:00)**.
 5. Chọn **Cron-based schedule**.
-6. Nhập Cron Expression: `cron(0 8 ? * MON *)`  Etương ứng **08:00 sáng Thứ Hai** hàng tuần theo giở Việt Nam.
-7. Nhấn **Next** ↁEchọn **AWS Lambda** ↁE**Invoke**. **Lambda function:** chọn `smartcv-digest`.
+6. Nhập Cron Expression: `cron(0 8 ? * MON *)` — tương ứng **08:00 sáng Thứ Hai** hàng tuần theo giờ Việt Nam.
+7. Nhấn **Next** → chọn **AWS Lambda** → **Invoke**. **Lambda function:** chọn `smartcv-digest`.
 8. Nhấn **Next**.
 9. Nhấn **Create schedule**.
 
-![Tạo Schedule Weekly Digest](/images/5-Workshop/5.8-EventBridge/5.50.png)
+![Tạo Schedule Weekly Digest](/images/5-Workshop/5.8-EventBridge/5.44.png)
 
 Cả hai Schedule **Weekly Digest** và **Daily Followup** đã được tạo thành công.
 
-![Danh sách Schedules](/images/5-Workshop/5.8-EventBridge/5.52.png)
+![Danh sách Schedules](/images/5-Workshop/5.8-EventBridge/5.46.png)
+![Danh sách Schedules](/images/5-Workshop/5.8-EventBridge/image51.png)

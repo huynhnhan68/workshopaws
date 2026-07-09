@@ -10,12 +10,12 @@ pre: " <b> 5. </b> "
 
 #### Project Overview
 
-Welcome to the **SmartCV** deployment Workshop  Ean AI-powered job application tracking and optimization system built on the **AWS Serverless Architecture**. The project helps users manage job applications, track recruitment statuses, store Resumes and Cover Letters, and uses AI models on **Amazon Bedrock** to analyze profiles, provide feedback, and suggest improvements to enhance the chances of getting hired.
+Welcome to the **SmartCV** deployment Workshop – an AI-powered job application tracking and optimization system built on the **AWS Serverless Architecture**. The project helps users manage job applications, track recruitment statuses, store Resumes and Cover Letters, and uses AI models on **Amazon Bedrock** to analyze profiles, provide feedback, and suggest improvements to enhance the chances of getting hired.
 
 In practice, the system is deployed using Infrastructure as Code (AWS CDK) to automate infrastructure provisioning. However, in this Workshop, all AWS services will be configured using the **Click-Ops** method through the AWS Management Console, helping learners clearly understand the role of each service and how components in a Serverless architecture connect with each other.
 
 {{% notice tip %}}
-**Select a Region from the start:** The entire Workshop uses the same Region  E**`ap-southeast-1` (Singapore)** is recommended. Before starting, select this Region in the top right corner of the AWS Console and keep it unchanged throughout for all services (DynamoDB, S3, Cognito, Lambda, API Gateway, EventBridge, Bedrock).
+**Select a Region from the start:** The entire Workshop uses the same Region — **`ap-southeast-1` (Singapore)** is recommended. Before starting, select this Region in the top right corner of the AWS Console and keep it unchanged throughout for all services (DynamoDB, S3, Cognito, Lambda, API Gateway, EventBridge, Bedrock).
 
 **Enable Bedrock Model Access first:** Since the Lambda in section 5.5 will call Amazon Bedrock, you should complete the "Enable Model Access" step in section **5.10** *before* doing section 5.5, to avoid an `AccessDeniedException` error when testing Lambda.
 {{% /notice %}}

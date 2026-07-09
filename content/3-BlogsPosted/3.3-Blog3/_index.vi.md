@@ -49,6 +49,6 @@ Giải pháp này minh họa cách xây dựng một hệ thống xử lý tin n
 
 **Nguồn tham khảo:**
 * AWS Architecture Blog: [Build a priority-based messaging system with Amazon MQ and AWS App Runner](https://aws.amazon.com/blogs/architecture/build-priority-based-messaging-system-amazonmq-apprunner/)
-* GitHub minh họa: [Amazon MQ Polling Mechanism Sample](https://github.com/aws-samples/sample-amazonmq-polling-mechanism)
-
+* GitHub minh họa: [Amazon MQ Polling Mechanism Sample](https://github.com/aws-samples/sample-amazonmq-polling-mechanism)|
+[Link post](https://www.facebook.com/groups/awsstudygroupfcj/posts/2194921531272807?locale=vi_VN)
 *(Đây là 1 bài blog mình đọc được và thấy trên aws blog, đây là những gì mình đã tóm tắt sau khi mình đọc xong có gì sai sót mong mọi người bỏ qua .)*

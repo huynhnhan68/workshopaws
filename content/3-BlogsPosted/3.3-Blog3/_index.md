@@ -51,6 +51,6 @@ This solution demonstrates how to build a production-ready priority-based messag
 
 **References:**
 * AWS Architecture Blog: [Build a priority-based messaging system with Amazon MQ and AWS App Runner](https://aws.amazon.com/blogs/architecture/build-priority-based-messaging-system-amazonmq-apprunner/)
-* GitHub Sample: [Amazon MQ Polling Mechanism Sample](https://github.com/aws-samples/sample-amazonmq-polling-mechanism)
-
+* GitHub Sample: [Amazon MQ Polling Mechanism Sample](https://github.com/aws-samples/sample-amazonmq-polling-mechanism)|
+[Link post](https://www.facebook.com/groups/awsstudygroupfcj/posts/2194921531272807?locale=vi_VN)
 *(This is a summary of an AWS blog post I read. Feel free to share your thoughts or point out any mistakes!)*

@@ -55,8 +55,8 @@ pre: " <b> 1.12. </b> "
 
 ### Tổng kết 12 tuần thực tập:
 
-* **Tuần 1 E**: Nền tảng AWS Cloud  EVPC, Networking, DNS Hybrid, CloudFormation.
-* **Tuần 5 E**: Compute & Storage  EEC2, EBS, EFS, FSx, S3, CloudFront, AWS Backup.
-* **Tuần 9 E2**: Dự án SmartCV  EServerless Architecture, Lambda, DynamoDB, CI/CD, Observability.
+* **Tuần 1-4**: Nền tảng AWS Cloud  EVPC, Networking, DNS Hybrid, CloudFormation.
+* **Tuần 5-8**: Compute & Storage  EEC2, EBS, EFS, FSx, S3, CloudFront, AWS Backup.
+* **Tuần 9-12**: Dự án SmartCV  EServerless Architecture, Lambda, DynamoDB, CI/CD, Observability.
 
 > Qua 12 tuần thực tập tại **Amazon Web Services Việt Nam**, đã tích lũy được kiến thức và kinh nghiệm thực chiến về AWS Cloud từ cơ bản đến nâng cao, hoàn thành dự án **SmartCV** theo chuẩn kỹ sư phần mềm với kiến trúc Serverless hiện đại và quy trình DevOps chuyên nghiệp.

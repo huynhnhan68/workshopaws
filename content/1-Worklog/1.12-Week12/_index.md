@@ -55,8 +55,8 @@ pre: " <b> 1.12. </b> "
 
 ### 12-Week Internship Summary:
 
-* **Weeks 1 E**: AWS Cloud Fundamentals  EVPC, Networking, Hybrid DNS, CloudFormation.
-* **Weeks 5 E**: Compute & Storage  EEC2, EBS, EFS, FSx, S3, CloudFront, AWS Backup.
-* **Weeks 9 E2**: SmartCV Project  EServerless Architecture, Lambda, DynamoDB, CI/CD, Observability.
+* **Weeks 1-3**: AWS Cloud Fundamentals  EVPC, Networking, Hybrid DNS, CloudFormation.
+* **Weeks 4-8**: Compute & Storage  EEC2, EBS, EFS, FSx, S3, CloudFront, AWS Backup.
+* **Weeks 9-12**: SmartCV Project  EServerless Architecture, Lambda, DynamoDB, CI/CD, Observability.
 
 > Over the 12-week internship at **Amazon Web Services Vietnam**, I accumulated practical knowledge and experience regarding AWS Cloud from basic to advanced, and completed the **SmartCV** project adhering to software engineering standards with a modern Serverless architecture and professional DevOps process.

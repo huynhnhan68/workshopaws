@@ -23,10 +23,10 @@ To meet the requirements for scalability, high availability, and cost optimizati
 The SmartCV system is built on a Serverless architecture on AWS, integrating core services: Amplify Hosting and Route 53 for Frontend, Cognito and API Gateway for authentication and API management, EventBridge and Lambda for logic processing, DynamoDB for data storage, S3 for file storage, Bedrock for AI tasks, SES for sending emails, and CloudWatch for system monitoring.
 
 ![SmartCV Architecture Overview](/images/5-Workshop/5.1-Introduction/5.1.jpg)
-**Figure 5.1.1**  EOverall architecture of the SmartCV system with full AWS Serverless services: Amplify Hosting, Route 53, Cognito, API Gateway, EventBridge, Lambda, DynamoDB, S3, Bedrock (AI LLM), SES, and CloudWatch.
+**Figure 5.1.1** — Overall architecture of the SmartCV system with full AWS Serverless services: Amplify Hosting, Route 53, Cognito, API Gateway, EventBridge, Lambda, DynamoDB, S3, Bedrock (AI LLM), SES, and CloudWatch.
 
 ![AWS account identity and deployment Region information](/images/5-Workshop/5.1-Introduction/5.2.jpg)
-**Figure 5.1.2**  EAWS account configuration interface (e.g., 'HNTNhan') and the selected Region 'Asia Pacific (Singapore)' serving as the central location to deploy all server services for the system in this workshop.
+**Figure 5.1.2** — AWS account configuration interface (e.g., 'HNTNhan') and the selected Region 'Asia Pacific (Singapore)' serving as the central location to deploy all server services for the system in this workshop.
 
 {{% notice tip %}}
 **Unify the Region from the start:** Select the **`Asia Pacific (Singapore)`** Region (or `ap-southeast-1` as shown in the console, see Figure 5.1.2) in the top right corner of the AWS Console and keep this Region unchanged for **all** services in the Workshop (DynamoDB, S3, Cognito, Lambda, API Gateway, EventBridge, Bedrock). Region mismatch between services is the most common cause of integration errors.

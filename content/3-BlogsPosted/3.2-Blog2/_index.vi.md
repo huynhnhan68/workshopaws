@@ -92,6 +92,6 @@ Thay vì chọn giữa hai hướng cực đoan là “mỗi tenant một hạ t
 Với các hệ thống stateful services, đặc biệt là hệ thống cần giữ dữ liệu trong memory để xử lý request nhanh, kiến trúc này là một gợi ý rất thực tế. Nó giúp giảm thời gian triển khai tenant mới, tối ưu chi phí vận hành và vẫn giữ được mức độ cô lập cần thiết cho từng khách hàng.
 
 **Nguồn tham khảo:**
-AWS Architecture Blog: [Building Hybrid Multi-Tenant Architecture for Stateful Services on AWS](https://aws.amazon.com/blogs/architecture/building-hybrid-multi-tenant-architecture-for-stateful-services-on-aws/)
-
+AWS Architecture Blog: [Building Hybrid Multi-Tenant Architecture for Stateful Services on AWS](https://aws.amazon.com/blogs/architecture/building-hybrid-multi-tenant-architecture-for-stateful-services-on-aws/)|
+[Link post](https://www.facebook.com/groups/awsstudygroupfcj/posts/2194925764605717?locale=vi_VN)
 *(Đây là 1 bài blog mình đọc được và thấy trên aws blog, đây là những gì mình đã tóm tắt sau khi mình đọc xong có gì sai sót mong mọi người bỏ qua .)*

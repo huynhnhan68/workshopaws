@@ -119,4 +119,5 @@ AI đang thay đổi ngành công nghiệp phần mềm theo một cách rất k
 ### Tài Liệu Tham Khảo
 AWS Machine Learning Blog  
 [How Frontier Teams Are Reinventing AI-Native Development](https://aws.amazon.com/blogs/machine-learning/how-frontier-teams-are-reinventing-ai-native-development/)  
+[Link bài post](https://www.facebook.com/groups/660548818043427?multi_permalinks=2196784587753168&hoisted_section_header_type=recently_seen&locale=vi_VN/)
 *(Đây là một bài viết mình đọc được trên blog của AWS và đây là những tóm tắt của mình sau khi đọc. Hy vọng nó hữu ích với bạn!)*

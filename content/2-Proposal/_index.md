@@ -1,16 +1,16 @@
 ---
 title: "Proposal"
-date: 2026-06-01
+date: 2026-06-30
 weight: 2
 chapter: false
-pre: " <b> 2. </b> "
+pre: " <b> 2 </b> "
 ---
 
 
-# SmartCV AI-Powered Job Application Tracker
+# SmartCV – AI-Powered Job Application Tracker
 ## AWS Serverless Solution for Tracking and Analyzing the Job Search Journey
 
-### 1. Project Overview (4-Member Team)
+### 1. Project Overview (4-Member Team : Against The Wind )
 SmartCV is an AI-powered job application tracking platform built entirely on AWS with a serverless architecture. The application allows users to record their entire application process, analyze data to discover trends (which resume version has the highest response rate, which channel is most effective, which company size is the best fit), and receive personalized coaching from Amazon Bedrock through a chat interface. The system also sends daily reminder emails and weekly summaries with AI-generated suggestions.
 
 ### 2. Problem Statement
@@ -26,14 +26,14 @@ Higher Success Rate: AI-powered data analysis identifies resume bottlenecks, and
 Personalization: AI Coaching from Bedrock provides in-depth, personalized application strategies for each user.
 
 *ROI Analysis:*
-Ultra-low Cost: Leverages AWS Free Tier; operational cost is only ~$0.20 E0.50/month.
+Ultra-low Cost: Leverages AWS Free Tier; operational cost is only ~$0.20–$0.50/month.
 Break-even Value: Saving just 2 hours/week pays for itself. Low operational costs save budget.
 Opportunity Value: Significantly shortens job search duration, delivering major financial benefit through earlier employment.
 
 
 
 ### 3. Solution Architecture
-SmartCV's architecture is built on an optimized Serverless model on AWS, ensuring automatic scalability at low cost. The system uses React and Vite for the Frontend interface, deployed directly via AWS Amplify  Ewhich integrates Amazon CloudFront for global content delivery. The backend is designed with API Gateway connecting to logic-processing functions in AWS Lambda, using Amazon DynamoDB to store application data and Amazon S3 for PDF resume management. The AI Coaching feature is integrated through Amazon Bedrock, while Amazon SES handles sending reminder emails and periodic reports. The entire infrastructure is managed as code (IaC) via AWS CDK with an automated CI/CD pipeline.
+SmartCV's architecture is built on an optimized Serverless model on AWS, ensuring automatic scalability at low cost. The system uses React and Vite for the Frontend interface, deployed directly via AWS Amplify — which integrates Amazon CloudFront for global content delivery. The backend is designed with API Gateway connecting to logic-processing functions in AWS Lambda, using Amazon DynamoDB to store application data and Amazon S3 for PDF resume management. The AI Coaching feature is integrated through Amazon Bedrock, while Amazon SES handles sending reminder emails and periodic reports. The entire infrastructure is managed as code (IaC) via AWS CDK with an automated CI/CD pipeline.
 
 
 ![SmartCV Architecture](/images/2-Proposal/sodokientruc.jpg)
@@ -70,7 +70,7 @@ SmartCV's architecture is built on an optimized Serverless model on AWS, ensurin
 ### 4. Technical Implementation
 
 *Implementation Phases*
-The project has two parts  Ebuilding the AWS backend and developing the React frontend  Eeach following 4 phases:
+The project has two parts — building the AWS backend and developing the React frontend — each following 4 phases:
 1. *Research and Architecture Design*: Analyze requirements, design the AWS Serverless architecture diagram, assign tasks among 4 team members.
 2. *Cost Estimation and Feasibility Check*: Use AWS Pricing Calculator to estimate costs, check Free Tier limits, and adjust service choices if needed.
 3. *Core Infrastructure and Feature Development*: Deploy CDK Stack, develop Lambda functions, connect DynamoDB, S3, API Gateway, and integrate Cognito.
@@ -85,20 +85,20 @@ The project has two parts  Ebuilding the AWS backend and developing the React 
 
 
 ### 5. Timeline & Milestones
-*Internship Period (April  EJuly 2026): 12 Weeks*
+*Internship Period (April – July 2026): 12 Weeks*
 
 | Phase | Activities |
 |---|---|
-| (Weeks 1 E) | Get familiar with AWS and core services (IAM, S3, Lambda, API Gateway, DynamoDB, Cognito, CloudWatch, Bedrock). Research Serverless architecture, set up the development environment, upgrade hardware, and install project tools. |
-| (Weeks 3 E) | Analyze system requirements, design AWS architecture, create architecture diagrams, design DynamoDB schema (Single-Table Design), select technologies, build Infrastructure as Code with AWS CDK, and adjust architecture based on mentor feedback. |
-| (Weeks 7 E0) | Deploy AWS Serverless infrastructure, develop Backend with Lambda, API Gateway, Cognito, and DynamoDB; integrate Amazon Bedrock for AI-powered CV analysis; develop the React interface, connect Frontend to Backend, test features, and optimize system performance. |
-| (Weeks 11 E2) | Finalize the entire project, deploy the application to AWS, perform end-to-end testing, fix bugs, optimize user experience, complete technical documentation, prepare the internship report, and demo the system in the production environment. |
+| (Weeks 1–2) | Get familiar with AWS and core services (IAM, S3, Lambda, API Gateway, DynamoDB, Cognito, CloudWatch, Bedrock). Research Serverless architecture, set up the development environment, upgrade hardware, and install project tools. |
+| (Weeks 3–6) | Analyze system requirements, design AWS architecture, create architecture diagrams, design DynamoDB schema (Single-Table Design), select technologies, build Infrastructure as Code with AWS CDK, and adjust architecture based on mentor feedback. |
+| (Weeks 7–10) | Deploy AWS Serverless infrastructure, develop Backend with Lambda, API Gateway, Cognito, and DynamoDB; integrate Amazon Bedrock for AI-powered CV analysis; develop the React interface, connect Frontend to Backend, test features, and optimize system performance. |
+| (Weeks 11–12) | Finalize the entire project, deploy the application to AWS, perform end-to-end testing, fix bugs, optimize user experience, complete technical documentation, prepare the internship report, and demo the system in the production environment. |
 | Post-Deployment | Continue research and development for 1 year: add advanced AI features, optimize AWS costs, improve performance, strengthen security, and scale the system to serve more users. |
 
 ### 6. Budget Estimation
 ![AWS Infrastructure Costs](/images/2-Proposal/budget_estimation.png)
 
-*Development Cost:* None  Eall 4 team members use AWS Free Tier and local dev environments.
+*Development Cost:* None — all 4 team members use AWS Free Tier and local dev environments.
 
 ### 7. Risk Assessment
 | Risk | Severity | Probability | Mitigation |
@@ -112,4 +112,4 @@ The project has two parts  Ebuilding the AWS backend and developing the React 
 
 ### 8. Expected Outcomes
 *Technical Improvements*: Users have complete data and analytics to make strategic decisions in their job search journey, fully replacing manual Excel-based tracking.
-*Long-term Value*: Accumulated data over time makes AI coaching increasingly accurate. The serverless architecture can be easily scaled to serve more users in the future.
+*Long-term Value*: Accumulated data over time makes AI coaching increasingly accurate. The serverless architecture can be easily scaled to serve more users 

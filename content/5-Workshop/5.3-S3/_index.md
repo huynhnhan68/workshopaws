@@ -13,7 +13,7 @@ The S3 bucket will be used to store the project's PDF Resume files. For security
 3. **General configuration:**
    - **Bucket name:** Enter `smartcv-resumes-YOUR_NAME` (the bucket name must be globally unique, replace `YOUR_NAME` with your name).
    - **AWS Region:** `ap-southeast-1`.
-4. **Block Public Access settings:** ensure **Block all public access** is **Enabled (Checked)**  Edo not make this bucket public.
+4. **Block Public Access settings:** ensure **Block all public access** is **Enabled (Checked)** — do not make this bucket public.
 5. Click **Create bucket**.
 6. After creation, click on the bucket name, switch to the **Permissions** tab.
 7. Scroll down to the **Cross-origin resource sharing (CORS)** section, click **Edit** and paste the following JSON:
@@ -28,10 +28,10 @@ The S3 bucket will be used to store the project's PDF Resume files. For security
   }
 ]
 ```
-![Create Bucket](/images/5-Workshop/5.3-S3/5.6.png)
-**Figure 5.3.1**  ECreate the `smartcv-resumes-YOUR_NAME` S3 bucket with Block Public Access enabled.
+![Create Bucket](/images/5-Workshop/5.3-S3/5.45.png)
+**Figure 5.3.1** — Create the `smartcv-resumes-YOUR_NAME` S3 bucket with Block Public Access enabled.
 
-![Configure CORS](/images/5-Workshop/5.3-S3/5.7.png)
-**Figure 5.3.2**  EConfigure CORS to allow the Frontend to upload via a Presigned URL.
+![Configure CORS](/images/5-Workshop/5.3-S3/5.49.png)
+**Figure 5.3.2** — Configure CORS to allow the Frontend to upload via a Presigned URL.
 
 The `smartcv-resumes-YOUR_NAME` bucket is now ready for Lambda to generate Presigned URLs and integrate file uploads from the Frontend.

@@ -27,7 +27,7 @@ pre: " <b> 4.2. </b> "
 
 ### Highlights
 
-### 1. Speaker Mr. Tinh  EPlatform Engineer at GoTymeX
+### 1. Speaker Mr. Tinh - Platform Engineer at GoTymeX
 
 **Topic:** *Context Is Everything: Making AI Actually Work for You*
 
@@ -42,7 +42,7 @@ Through this sharing, I understand that when using AI, it is necessary to provid
 
 ---
 
-### 2. Speaker Pham Nguyen Hai Anh - G-AsiaPacific Vietnam
+### 2. Speaker Pham Nguyen Hai Anh - AsiaPacific Vietnam
 
 **Topic:** *Friendly AI Assistant with Amazon Quick*
 
@@ -57,7 +57,7 @@ From this sharing, I learned how AI can support faster data analysis and report 
 
 ---
 
-### 3. Speaker Nguyen Tuan Thinh  EDevOps Engineer at First Cloud AI Journey Vietnam
+### 3. Speaker Nguyen Tuan Thinh - DevOps Engineer at First Cloud AI Journey Vietnam
 
 **Topic:** *From Edge To Origin: CloudFront as Your Foundation*
 
@@ -87,7 +87,7 @@ From this presentation, I learned how an idea can be developed into a product in
 
 ---
 
-### 5. Speaker Dao Duc  ESolution Architect at Cloud Kinetics
+### 5. Speaker Dao Duc - Solution Architect at Cloud Kinetics
 
 **Topic:** *Non-Determinism of "Deterministic" LLM Settings*
 
@@ -102,7 +102,7 @@ Through this sharing, I gained a deeper understanding of how LLMs generate respo
 
 ---
 
-### 6. Speaker Cat Vy  ESenior Business Systems Analyst at VPBank
+### 6. Speaker Cat Vy - Senior Business Systems Analyst at VPBank
 
 **Topic:** *Enterprise-Grade Multi-Agent System: The Case of Startup Credit Scoring*
 

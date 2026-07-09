@@ -23,7 +23,7 @@ pre: " <b> 4.1. </b> "
 
 ### Highlights
 
-### 1. Speaker Huynh Hoang Long  EFCAJ Mentor from AWS Vietnam
+### 1. Speaker Huynh Hoang Long - FCAJ Mentor from AWS Vietnam
 
 **Topic:** *Addicted to Learning Like You're Addicted to Social Media*
 
@@ -36,7 +36,7 @@ Through this presentation, I learned the lesson of a proactive learning spirit, 
 
 ---
 
-### 2. Speaker Nguyen Tuan Thinh  EFCAJ Mentor from AWS Vietnam
+### 2. Speaker Nguyen Tuan Thinh - FCAJ Mentor from AWS Vietnam
 
 **Topic:** *Automated Prompt Engineering: Enhancing LLM Output Quality*
 
@@ -52,7 +52,7 @@ From this sharing, I learned how to write clearer prompts, optimize commands to 
 
 ---
 
-### 3. Speaker Anh Khang  ESolutions Architect at Cloud Kinetics
+### 3. Speaker Anh Khang - Solutions Architect at Cloud Kinetics
 
 **Topic:** *AI-Ready Freshers: Skills and Mindset in the AI Era*
 
@@ -65,7 +65,7 @@ Through this sharing, I better understood the skills needed to prepare for worki
 
 ---
 
-### 4. Speaker Ms. Thao  ESoftware Developer at VIB International Bank
+### 4. Speaker Ms. Thao - Software Developer at VIB International Bank
 
 **Topic:** *BMAD METHOD  EBringing Agile and AI to Your IDE*
 

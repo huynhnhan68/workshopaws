@@ -9,10 +9,10 @@ pre: " <b> 2. </b> "
 
 # SmartCV AI-Powered Job Application Tracker 
 ## Giải pháp AWS Serverless cho theo dõi và phân tích hành trình tìm việc
-### 1. Tổng quan dự án ( Dự án với 4 thành viên )
+### 1. Tổng quan dự án ( Dự án với 4 thành viên : Against The Wind  )
 SmartCV là nền tảng theo dõi đơn ứng tuyển việc làm được hỗ trợ bởi trí tuệnhân tạo, xây dựng hoàn toàn trên AWS với kiến trúc serverless. Ứng dụng cho phép người dùng ghi lại toàn bộquá trình ứng tuyển, phân tích dữ liệu để phát hiện xu hướng (phiên bản hồ sơ nào có tỷ lệphản hồi cao nhất, kênh nào hiệu quả nhất, quy mô công ty nào phù hợp), và nhận huấn luyện cá nhân hóa từ Amazon Bedrock thông qua giao diện chat. Hệ thống cũng gửi email nhắc nhởhàng ngày và bản tóm tắt hàng tuần có chứa gợi ý của AI.  
 
-### 2. Tuyên bộvấn đề 
+### 2. Tuyên bố vấn đề 
 *Vấn đểhiện tại*  
 Người tìm việc thường theo dõi ứng tuyển bằng bảng tính hoặc ghi chú tản mạn, không có phân tích hệ thống. Họ không biết phiên bản hồ sơ nào hiệu quả, kênh nào mang lại phỏng vấn nhiều hơn, hay họ đã bỏ lỡ bao nhiêu cơ hội vì không follow-up đúng hạn. Các công cụ bên thứ ba như LinkedIn hoặc các ATS tracker thường phức tạp, tốn kém hoặc không cung cấp phân tích cá nhân hóa.
 
@@ -86,10 +86,10 @@ Dự án gồm 2 phần  Exây dựng backend AWS và phát triển frontend R
 
 | Giai đoạn | Nội dung thực hiện |
 |---|---|
-| (Tuần 1 E) | Làm quen với AWS và các dịch vụ cốt lõi (IAM, S3, Lambda, API Gateway, DynamoDB, Cognito, CloudWatch, Bedrock). Nghiên cứu kiến trúc Serverless, chuẩn bịmôi trường phát triển, nâng cấp phần cứng và cài đặt các công cụ phục vụ dự án. |
-| (Tuần 3 E) | Phân tích yêu cầu hệ thống, thiết kế kiến trúc AWS, xây dựng sơ đồ kiến trúc, thiết kế cơ sởdữ liệu DynamoDB (Single-Table Design), lựa chọn công nghệ xây dựng Infrastructure as Code bằng AWS CDK và điều chỉnh kiến trúc theo góp ý của nhóm hướng dẫn. |
-| (Tuần 7 E0) | Triển khai hạ tầng AWS Serverless, phát triển Backend với Lambda, API Gateway, Cognito và DynamoDB; tích hợp Amazon Bedrock để phân tích CV bằng AI; phát triển giao diện React, kết nối Frontend với Backend, kiểm thử các chức năng và tối ưu hiệu năng hệ thống. |
-| (Tuần 11 E2) | Hoàn thiện toàn bộdự án, triển khai ứng dụng lên AWS , kiểm thử tổng thể sửa lỗi, tối ưu trải nghiệm người dùng, hoàn thiện tài liệu kỹ thuật, chuẩn bịbáo cáo thực tập và demo hệ thống trên môi trường thực tế. |
+| (Tuần 1-2) | Làm quen với AWS và các dịch vụ cốt lõi (IAM, S3, Lambda, API Gateway, DynamoDB, Cognito, CloudWatch, Bedrock). Nghiên cứu kiến trúc Serverless, chuẩn bịmôi trường phát triển, nâng cấp phần cứng và cài đặt các công cụ phục vụ dự án. |
+| (Tuần 3-6) | Phân tích yêu cầu hệ thống, thiết kế kiến trúc AWS, xây dựng sơ đồ kiến trúc, thiết kế cơ sởdữ liệu DynamoDB (Single-Table Design), lựa chọn công nghệ xây dựng Infrastructure as Code bằng AWS CDK và điều chỉnh kiến trúc theo góp ý của nhóm hướng dẫn. |
+| (Tuần 7-8) | Triển khai hạ tầng AWS Serverless, phát triển Backend với Lambda, API Gateway, Cognito và DynamoDB; tích hợp Amazon Bedrock để phân tích CV bằng AI; phát triển giao diện React, kết nối Frontend với Backend, kiểm thử các chức năng và tối ưu hiệu năng hệ thống. |
+| (Tuần 9-12) | Hoàn thiện toàn bộdự án, triển khai ứng dụng lên AWS , kiểm thử tổng thể sửa lỗi, tối ưu trải nghiệm người dùng, hoàn thiện tài liệu kỹ thuật, chuẩn bịbáo cáo thực tập và demo hệ thống trên môi trường thực tế. |
 | Sau khi triển khai | Tiếp tục nghiên cứu và phát triển, bổ sung các tính năng AI nâng cao, tối ưu chi phí AWS, cải thiện hiệu năng, tăng cường bảo mật và mở rộng hệ thống để phục vụ nhiều người dùng hơn. |
 
 ### 6. Ước tính ngân sách  

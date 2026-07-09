@@ -88,3 +88,5 @@ For stateful services that rely heavily on in-memory caching to maintain low lat
 
 **References:**
 AWS Architecture Blog: [Building Hybrid Multi-Tenant Architecture for Stateful Services on AWS](https://aws.amazon.com/blogs/architecture/building-hybrid-multi-tenant-architecture-for-stateful-services-on-aws/)
+|
+[Link post](https://www.facebook.com/groups/awsstudygroupfcj/posts/2194925764605717?locale=vi_VN/)

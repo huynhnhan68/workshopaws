@@ -29,7 +29,7 @@ Before starting this section, ensure you have completed the **Enable Model Acces
 ![Create IAM Role](/images/5-Workshop/5.5-Lambda/5.32.png)
 ![Create IAM Role](/images/5-Workshop/5.5-Lambda/5.34.png)
 ![Create IAM Role](/images/5-Workshop/5.5-Lambda/5.35.png)
-**Figure 5.5.1**  ECreate the `SmartCV-Lambda-Role` IAM Role with the 5 necessary policies.
+**Figure 5.5.1** — Create the `SmartCV-Lambda-Role` IAM Role with the 5 necessary policies.
 #### Create a Lambda Layer for Shared Libraries
 
 Open the terminal at the root directory of the SmartCV project and run the following command:
@@ -49,7 +49,7 @@ This command generates a file named `shared_layer.zip`.
 
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.11.png)
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.12.png)
-**Figure 5.5.2**  ECreate the `smartcv-dependencies` Layer from the `shared_layer.zip` file.
+**Figure 5.5.2** — Create the `smartcv-dependencies` Layer from the `shared_layer.zip` file.
 
 #### List of 7 Lambda Functions to Create
 
@@ -67,19 +67,19 @@ The SmartCV system consists of **7 Lambda functions**, each handling a specific 
 
 For **each function** in the list above, repeat the following steps:
 
-1. In the Lambda sidebar, select **Functions** ↁE**Create function**.
+1. In the Lambda sidebar, select **Functions** → **Create function**.
 2. Choose *Author from scratch*.
 3. **Function name:** enter the function name (e.g., `smartcv-applications`).
 4. **Runtime:** *Python 3.12*.
 5. **Architecture:** *arm64* (recommended) or *x86_64*.
-6. **Execution role:** select *Use an existing role* ↁE`SmartCV-Lambda-Role`.
+6. **Execution role:** select *Use an existing role* → `SmartCV-Lambda-Role`.
 7. Click **Create function**.
 
 Immediately after creating each function, configure the following settings **directly on that function's interface**:
 
 **a. Attach the Layer to the Function**
 
-Scroll down to the **Layers** section ↁE**Add a layer** ↁE*Specify an ARN* ↁEpaste the ARN of the `smartcv-dependencies` layer ↁE**Add**.
+Scroll down to the **Layers** section → **Add a layer** → *Specify an ARN* → paste the ARN of the `smartcv-dependencies` layer → **Add**.
 
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.13.png)
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.14.png)
@@ -88,21 +88,21 @@ Scroll down to the **Layers** section ↁE**Add a layer** ↁE*Specify an ARN* �
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.17.png)
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.18.png)
 ![Create Lambda Layer](/images/5-Workshop/5.5-Lambda/5.19.png)
-**Figure 5.5.3**  EAttach the `smartcv-dependencies` Layer to each Lambda function.
+**Figure 5.5.3** — Attach the `smartcv-dependencies` Layer to each Lambda function.
 
 **b. Configure Timeout and Memory**
 
 {{% notice warning %}}
-Lambda defaults to a Timeout of only 3 seconds  Ewhich is not enough time to call Amazon Bedrock (usually takes a few seconds). If you do not increase the Timeout, you will encounter a `Task timed out after 3.00 seconds` error.
+Lambda defaults to a Timeout of only 3 seconds — which is not enough time to call Amazon Bedrock (usually takes a few seconds). If you do not increase the Timeout, you will encounter a `Task timed out after 3.00 seconds` error.
 {{% /notice %}}
 
-Go to the **Configuration** tab ↁE**General configuration** ↁE**Edit**:
+Go to the **Configuration** tab → **General configuration** → **Edit**:
 - **Memory:** 256 MB (recommended, can be increased if needed).
-- **Timeout:** 30 seconds (mandatory for `insights` and `digest` as they call Bedrock; other functions can be set to 10 E5 seconds).
+- **Timeout:** 30 seconds (mandatory for `insights` and `digest` as they call Bedrock; other functions can be set to 10–15 seconds).
 
 **c. Set up Environment Variables**
 
-Go to **Configuration** ↁE**Environment variables** ↁE**Edit** ↁE**Add environment variable**. Add the following variables for **all Lambda functions**:
+Go to **Configuration** → **Environment variables** → **Edit** → **Add environment variable**. Add the following variables for **all Lambda functions**:
 
 | Key | Value |
 | --- | --- |
@@ -129,16 +129,16 @@ Click **Save**.
 ![Set up environment variables](/images/5-Workshop/5.5-Lambda/5.20.png)
 ![Set up environment variables](/images/5-Workshop/5.5-Lambda/5.21.png)
 ![Set up environment variables](/images/5-Workshop/5.5-Lambda/5.22.png)
-**Figure 5.5.4**  ESet up environment variables (TABLE_NAME, RESUME_BUCKET, USER_POOL_ID, BEDROCK_MODEL_ID, SES_FROM_EMAIL...).
+**Figure 5.5.4** — Set up environment variables (TABLE_NAME, RESUME_BUCKET, USER_POOL_ID, BEDROCK_MODEL_ID, SES_FROM_EMAIL...).
 
 #### Upload Source Code for Each Lambda
 
 The source code for the Lambda functions is pre-written in the project's `lambdas/` directory. For **each function**, perform the following:
 
 1. Open the SmartCV source code on your local machine, and navigate to the `lambdas/<function-name>/` directory (e.g., `lambdas/applications/`).
-2. Compress all the files **inside** that directory into a zip file (e.g., `applications.zip`)  Enote: select the files inside to compress, do not compress the parent directory itself.
+2. Compress all the files **inside** that directory into a zip file (e.g., `applications.zip`) — note: select the files inside to compress, do not compress the parent directory itself.
 3. Return to the AWS Console, navigate to the management page of the corresponding Lambda function, and select the **Code** tab.
-4. Click **Upload from** ↁE**.zip file**, select the newly created zip file, and click **Save**.
+4. Click **Upload from** → **.zip file**, select the newly created zip file, and click **Save**.
 
 Repeat this process for all 7 functions: `applications`, `settings`, `insights`, `notes`, `digest`, `followup`, `cognito-verify`.
 
@@ -149,4 +149,4 @@ Repeat this process for all 7 functions: `applications`, `settings`, `insights`,
 ![Upload code for each function](/images/5-Workshop/5.5-Lambda/5.27.png)
 ![Upload code for each function](/images/5-Workshop/5.5-Lambda/5.28.png)  
 ![Upload code for each function](/images/5-Workshop/5.5-Lambda/5.29.png)
-**Figure 5.5.5**  EUpload the source code .zip file for each Lambda function (7 functions).
+**Figure 5.5.5** — Upload the source code .zip file for each Lambda function (7 functions).

@@ -123,4 +123,5 @@ Perhaps in the near future, the crucial skill of a Software Engineer will not on
 ### References
 AWS Machine Learning Blog  
 [How Frontier Teams Are Reinventing AI-Native Development](https://aws.amazon.com/blogs/machine-learning/how-frontier-teams-are-reinventing-ai-native-development/)  
+[Link post](https://www.facebook.com/groups/660548818043427?multi_permalinks=2196784587753168&hoisted_section_header_type=recently_seen&locale=vi_VN/)
 *(This is a blog post I read on the AWS blog, and these are my summaries after reading. Hope you find it useful!)*

@@ -12,8 +12,8 @@ Amazon Cognito plays the role of user authentication (sign-up, sign-in) for Smar
 2. Click **Create user pool**. In the **Cognito user pool sign-in options** section, check **Email**.
 3. Leave the remaining settings as default, and name the user pool `smartcv-users`.
 
-![Create User Pool](/images/5-Workshop/5.4-Cognito/5.8.png)
-**Figure 5.4.1**  ECreate the `smartcv-users` User Pool with Email sign-in.
+![Create User Pool](/images/5-Workshop/5.4-Cognito/5.50.png)
+**Figure 5.4.1** — Create the `smartcv-users` User Pool with Email sign-in.
 
 #### Get configuration information for the Frontend
 
@@ -24,5 +24,5 @@ Once created, you need to retrieve the parameters to configure the React Fronten
 3. Switch to the **App integration** tab.
 4. Scroll down to the **App client list** section, copy the **Client ID** of `smartcv-frontend` and save it to your notes.
 
-![Get User Pool ID and Client ID](/images/5-Workshop/5.4-Cognito/5.9.png)
-**Figure 5.4.2**  ECopy the User pool ID and Client ID to configure the Frontend.
+![Get User Pool ID and Client ID](/images/5-Workshop/5.4-Cognito/5.51.png)
+**Figure 5.4.2** — Copy the User pool ID and Client ID to configure the Frontend.

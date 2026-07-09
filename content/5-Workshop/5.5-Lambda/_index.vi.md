@@ -7,7 +7,7 @@ pre: " <b> 5.5. </b> "
 ---
 
 
-Trước khi làm phần này, đảm bảo bạn đã hoàn thành bước **Enable Model Access** cho Amazon Bedrock ở mục [5.10](../5.10-bedrock/). Nếu chưa, các hàm Lambda gọi Bedrock (`insights`, `digest`) sẽ bộlỗi `AccessDeniedException` khi test.
+Trước khi làm phần này, đảm bảo bạn đã hoàn thành bước **Enable Model Access** cho Amazon Bedrock ở mục [5.10](../5.10-bedrock/). Nếu chưa, các hàm Lambda gọi Bedrock (`insights`, `digest`) sẽ bị lỗi `AccessDeniedException` khi test.
 
 
 #### Tạo IAM Execution Role cho Lambda
@@ -29,7 +29,7 @@ Trước khi làm phần này, đảm bảo bạn đã hoàn thành bước **En
 ![Tạo IAM Role](/images/5-Workshop/5.5-Lambda/5.32.png)
 ![Tạo IAM Role](/images/5-Workshop/5.5-Lambda/5.34.png)
 ![Tạo IAM Role](/images/5-Workshop/5.5-Lambda/5.35.png)
-**Hình 5.5.1**  ETạo IAM Role `SmartCV-Lambda-Role` với 5 policy cần thiết.
+**Hình 5.5.1** — Tạo IAM Role `SmartCV-Lambda-Role` với 5 policy cần thiết.
 #### Tạo Lambda Layer chứa thư viện dùng chung
 
 Mở terminal tại thư mục gốc dự án SmartCV, chạy lệnh:
@@ -49,7 +49,7 @@ Lệnh này tạo ra file `shared_layer.zip`.
 
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.11.png)
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.12.png)
-**Hình 5.5.2**  ETạo Layer `smartcv-dependencies` từ file `shared_layer.zip`.
+**Hình 5.5.2** — Tạo Layer `smartcv-dependencies` từ file `shared_layer.zip`.
 
 #### Danh sách 7 hàm Lambda cần tạo
 
@@ -60,26 +60,26 @@ Hệ thống SmartCV gồm **7 hàm Lambda**, mỗi hàm xử lý một nghiệp
 3. `smartcv-settings`: cài đặt mục tiêu (Goal) và theo dõi Streak.
 4. `smartcv-notes`: ghi chú Timeline.
 5. `smartcv-digest`: gửi email báo cáo thống kê hàng tuần.
-6. `smartcv-followup`: gửi email nhắc nhởfollow-up ứng tuyển.
+6. `smartcv-followup`: gửi email nhắc nhở follow-up ứng tuyển.
 7. `smartcv-cognito-verify`: tự động xác minh email khi có user đăng ký mới.
 
 #### Tạo từng hàm
 
 Với **mỗi hàm** trong danh sách trên, lặp lại các bước sau:
 
-1. ở sidebar Lambda, chọn **Functions** ↁE**Create function**.
+1. Ở sidebar Lambda, chọn **Functions** → **Create function**.
 2. Chọn *Author from scratch*.
 3. **Function name:** nhập tên hàm (ví dụ `smartcv-applications`).
 4. **Runtime:** *Python 3.12*.
 5. **Architecture:** *arm64* (khuyên dùng) hoặc *x86_64*.
-6. **Execution role:** chọn *Use an existing role* ↁE`SmartCV-Lambda-Role`.
+6. **Execution role:** chọn *Use an existing role* → `SmartCV-Lambda-Role`.
 7. Click **Create function**.
 
 Ngay sau khi tạo mỗi hàm, thiết lập tiếp các mục sau **ngay trên giao diện của hàm đó**:
 
 **a. Gắn Layer vào Function**
 
-Kéo xuống phần **Layers** ↁE**Add a layer** ↁE*Specify an ARN* ↁEdán ARN của layer `smartcv-dependencies` ↁE**Add**.
+Kéo xuống phần **Layers** → **Add a layer** → *Specify an ARN* → dán ARN của layer `smartcv-dependencies` → **Add**.
 
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.13.png)
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.14.png)
@@ -88,21 +88,21 @@ Kéo xuống phần **Layers** ↁE**Add a layer** ↁE*Specify an ARN* ↁEdán
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.17.png)
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.18.png)
 ![Tạo Lambda Layer](/images/5-Workshop/5.5-Lambda/5.19.png)
-**Hình 5.5.3**  EGắn Layer `smartcv-dependencies` vào từng hàm Lambda.
+**Hình 5.5.3** — Gắn Layer `smartcv-dependencies` vào từng hàm Lambda.
 
 **b. Cấu hình Timeout và Memory**
 
 {{% notice warning %}}
-Lambda mặc định có Timeout chỉ3 giây  Ekhông đủ thời gian đểgọi Amazon Bedrock (thường mất vài giây). Nếu không tăng Timeout, bạn sẽ gặp lỗi `Task timed out after 3.00 seconds`.
+Lambda mặc định có Timeout chỉ 3 giây — không đủ thời gian để gọi Amazon Bedrock (thường mất vài giây). Nếu không tăng Timeout, bạn sẽ gặp lỗi `Task timed out after 3.00 seconds`.
 {{% /notice %}}
 
-Vào tab **Configuration** ↁE**General configuration** ↁE**Edit**:
-- **Memory:** 256 MB (khuyến nghở  có thểtăng nếu cần).
-- **Timeout:** 30 giây (bắt buộc cho `insights` và `digest` vì có gọi Bedrock; các hàm khác có thểđể10 E5 giây).
+Vào tab **Configuration** → **General configuration** → **Edit**:
+- **Memory:** 256 MB (khuyến nghị, có thể tăng nếu cần).
+- **Timeout:** 30 giây (bắt buộc cho `insights` và `digest` vì có gọi Bedrock; các hàm khác có thể để 10–15 giây).
 
 **c. Thiết lập biến môi trường**
 
-Vào **Configuration** ↁE**Environment variables** ↁE**Edit** ↁE**Add environment variable**. Thêm các biến sau cho **tất cả các hàm Lambda**:
+Vào **Configuration** → **Environment variables** → **Edit** → **Add environment variable**. Thêm các biến sau cho **tất cả các hàm Lambda**:
 
 | Key | Value |
 | --- | --- |
@@ -129,16 +129,16 @@ Nhấn **Save**.
 ![Thiết lập biến môi trường](/images/5-Workshop/5.5-Lambda/5.20.png)
 ![Thiết lập biến môi trường](/images/5-Workshop/5.5-Lambda/5.21.png)
 ![Thiết lập biến môi trường](/images/5-Workshop/5.5-Lambda/5.22.png)
-**Hình 5.5.4**  EThiết lập biến môi trường (TABLE_NAME, RESUME_BUCKET, USER_POOL_ID, BEDROCK_MODEL_ID, SES_FROM_EMAIL...).
+**Hình 5.5.4** — Thiết lập biến môi trường (TABLE_NAME, RESUME_BUCKET, USER_POOL_ID, BEDROCK_MODEL_ID, SES_FROM_EMAIL...).
 
 #### Upload mã nguồn cho từng Lambda
 
 Mã nguồn các hàm Lambda đã được viết sẵn trong thư mục `lambdas/` của dự án. Với **mỗi hàm**, thực hiện:
 
 1. Mở mã nguồn SmartCV trên máy, vào thư mục `lambdas/<tên-hàm>/` (ví dụ `lambdas/applications/`).
-2. Nén toàn bộfile **bên trong** thư mục đó thành file zip (ví dụ `applications.zip`)  Elưu ý: chọn các file bên trong đểnén, không nén cả thư mục cha.
+2. Nén toàn bộ file **bên trong** thư mục đó thành file zip (ví dụ `applications.zip`) — lưu ý: chọn các file bên trong để nén, không nén cả thư mục cha.
 3. Quay lại AWS Console, vào trang quản lý hàm Lambda tương ứng, chọn tab **Code**.
-4. Click **Upload from** ↁE**.zip file**, chọn file zip vừa tạo, click **Save**.
+4. Click **Upload from** → **.zip file**, chọn file zip vừa tạo, click **Save**.
 
 Lặp lại thao tác này cho tất cả 7 hàm: `applications`, `settings`, `insights`, `notes`, `digest`, `followup`, `cognito-verify`.
 
@@ -149,4 +149,4 @@ Lặp lại thao tác này cho tất cả 7 hàm: `applications`, `settings`, `i
 ![Upload code cho từng hàm](/images/5-Workshop/5.5-Lambda/5.27.png)
 ![Upload code cho từng hàm](/images/5-Workshop/5.5-Lambda/5.28.png)  
 ![Upload code cho từng hàm](/images/5-Workshop/5.5-Lambda/5.29.png)
-**Hình 5.5.5**  EUpload file .zip mã nguồn cho từng hàm Lambda (7 hàm).
+**Hình 5.5.5** — Upload file .zip mã nguồn cho từng hàm Lambda (7 hàm).
