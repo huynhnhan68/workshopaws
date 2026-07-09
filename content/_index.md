@@ -10,7 +10,7 @@ chapter: false
 
 
 ### Student Information:
-&emsp; **Full Name:** Huỳnh NguyềE Trí Nhân
+&emsp; **Full Name:** Huỳnh Nguyễn Trí Nhân
 
 &emsp; **Phone Number:** 0905606269
 
