@@ -7,7 +7,7 @@ pre: " <b> 4. </b> "
 ---
 
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhở với những kiến thức mới, hay và bộích, cùng với đó là những món quà và những khoảnh khắc rất tuyệt vời.
+Trong quá trình thực tập, em đã tham gia 3 events, với mỗi event là một trải nghiệm đáng nhở với những kiến thức mới, hay và bộích, cùng với đó là những món quà và những khoảnh khắc rất tuyệt vời.
 
 ### [Event 1](4.1-Event1/)
 &emsp;**Tên sự kiện:** FCAJ Community Day 09-05
@@ -32,21 +32,13 @@ Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là
 
 
 ### [Event 3](4.3-Event3/)
-&emsp;**Tên sự kiện:** FCAJ Community Day ....
+&emsp;**Tên sự kiện:** FCAJ Community Day AWS Cloud Architect 
 
-&emsp;**Thời gian:** 09:00 ngày 23/05/2026
-
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, sở 02 đường Hải Triều, phường Sài Gòn, thành phở Hở Chí Minh
-
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
-
-
-### [Event 4](4.4-Event4/)
-&emsp;**Tên sự kiện:** FCAJ Community Day ....
-
-&emsp;**Thời gian:** 09:00 ngày 23/05/2026
+&emsp;**Thời gian:** 09:00 ngày 11/07/2026
 
 &emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, sở 02 đường Hải Triều, phường Sài Gòn, thành phở Hở Chí Minh
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
+
+
+
